@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doozy</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+	<style type="text/css">
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+strong {
+	font-weight:bold;color:#0289ce;
+}
+
+em {
+	font-style:oblique;
+}
+
+p {
+	margin:15px 0;
+}
+
+.aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+
+h1 {font-size:180%;}
+h2 {font-size:150%;}
+h3 {font-size:125%;}
+h4 {font-size:100%;}
+h5 {font-size:90%;}
+h6 {font-size:80%;}
+
+a:link {color:#0289ce;}
+a:hover {color:#f64274;}
+
+
+/*End RESET - Begin Full Width CSS*/
+	body {
+		background:#424242;
+		color:#F2F2F2;
+		font:15px Arial
+	}
+
+	.wrap {
+		margin:0 auto;
+		width:900px;
+	}
+	
+	#header {
+		float:left;
+		padding:15px 0;
+		min-width:100%;
+	}
+	
+	#header {
+		background: #1C1C1C;
+		color:#D8D8D8 
+		font: Arial
+	}
+	
+	#header .logo {
+		float:left;
+		width:400px;
+	}
+	
+	#header p {
+		float:right;
+		width:400px;
+		margin:0;
+	}
+	
+	#content {
+		padding:15px 0;
+		clear:both;
+	}
+</style>
+</head>
+
+<body >
+
+<div id="header">
+	<div class="wrap">
+    	<div class="logo">
+        	<a href="#">Logo Of Your Site!</a>
+         </div>
+            <p>This site is amazing!</p>
+    </div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>
